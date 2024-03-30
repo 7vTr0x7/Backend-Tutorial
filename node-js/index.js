@@ -1,10 +1,11 @@
 import http from "http";
 import name from "./features.js";
+import { add } from "./features.js";
 console.log(name);
 
 const server = http.createServer((req, res) => {
   if (req.url === "/about") {
-    res.end("<h1>About</h1>");
+    res.end(`<h1>${add()}</h1>`);
   } else if (req.url === "/") {
     res.end("<h1>Home</h1>");
   } else {
