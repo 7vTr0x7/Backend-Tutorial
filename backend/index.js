@@ -1,22 +1,11 @@
-import http from "http";
-import name from "./features.js";
-import { add } from "./features.js";
+import express from "express";
 
-import fs from "fs";
+const app = express();
 
-const home = fs.readFileSync("./index.html");
-
-console.log(name);
-const server = http.createServer((req, res) => {
-  if (req.url === "/about") {
-    res.end(`<h1>${add()}</h1>`);
-  } else if (req.url === "/") {
-    res.end(home);
-  } else {
-    res.end("<h1>Not Found</h1>");
-  }
+app.get("/", (req, res) => {
+  res.send("hi");
 });
 
-server.listen(5000, () => {
-  console.log("server");
+app.listen(5000, () => {
+  console.log("ckjc");
 });
