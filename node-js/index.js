@@ -1,4 +1,6 @@
-const http = require("http");
+import http from "http";
+import name from "./features.js";
+console.log(name);
 
 const server = http.createServer((req, res) => {
   if (req.url === "/about") {

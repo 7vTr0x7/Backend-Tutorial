@@ -1,0 +1,11 @@
+
+ 
+
+   # everything in node.js is module
+
+      -> modules are basically function
+
+      - > Types 
+         -> builtIn - http
+         -> ThirdParty - nodemon
+         -> FileBade 
