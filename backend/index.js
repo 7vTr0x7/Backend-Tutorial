@@ -12,7 +12,7 @@ app.use(express.urlencoded({ extended: true }));
 app.get("/", (req, res) => {
   res.render("index", { name: "vtrox" });
 });
-app.post("/", (req, res) => {
+app.post("/contact", (req, res) => {
   console.log(req.body);
   users.push({ userName: req.body.name, email: req.body.email });
   res.render("success");
