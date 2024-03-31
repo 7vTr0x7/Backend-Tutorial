@@ -18,6 +18,12 @@ app.post("/", (req, res) => {
   res.render("success");
 });
 
+app.get("/users", (req, res) => {
+  res.json({
+    users,
+  });
+});
+
 app.listen(5000, () => {
   console.log("ckjc");
 });
